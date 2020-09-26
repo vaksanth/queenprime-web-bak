@@ -7,9 +7,14 @@ import { Component, Input, Output, EventEmitter, OnInit } from '@angular/core';
 })
 export class VideoPlayerComponent implements OnInit {
   @Input() src: string;
+  @Output() cancelFunction: EventEmitter<any> = new EventEmitter();
   constructor() { }
 
   ngOnInit(): void {
+  }
+
+  cancel(){
+    this.cancelFunction.emit('false');
   }
 
 }
