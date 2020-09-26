@@ -13,6 +13,7 @@ import {MatStepperModule} from '@angular/material/stepper';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { FormsModule,ReactiveFormsModule } from '@angular/forms';
 import { MatInputModule } from '@angular/material/input';
+import { CarouselModule } from 'ngx-bootstrap/carousel';
 
 const routes: Routes = [
   { path: '', redirectTo: '/home', pathMatch: 'full'},
@@ -47,7 +48,8 @@ const routes: Routes = [
     FormsModule,
     ReactiveFormsModule,
     MatStepperModule,
-    MatInputModule
+    MatInputModule,
+    CarouselModule.forRoot()
   ],
   providers: [],
   bootstrap: [AppComponent]
