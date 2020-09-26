@@ -1,0 +1,46 @@
+<div class="row">
+  <div class="col-lg-8 col-md-8 col-sm-8 col-xs-8 mx-auto">
+    <mat-horizontal-stepper linear #stepper>
+      <mat-step [stepControl]="firstFormGroup" [editable]="isEditable">
+        <form [formGroup]="firstFormGroup">
+          <ng-template matStepLabel>Step 1</ng-template>
+          <mat-form-field>
+            <mat-label>Name</mat-label>
+            <input matInput formControlName="firstCtrl" placeholder="Last name, First name" required>
+          </mat-form-field>
+          <div>
+            <button mat-button matStepperNext>Next</button>
+          </div>
+        </form>
+      </mat-step>
+      <mat-step [stepControl]="secondFormGroup" [editable]="isEditable">
+        <form [formGroup]="secondFormGroup">
+          <ng-template matStepLabel>Step 2</ng-template>
+          <mat-form-field>
+            <mat-label>Address</mat-label>
+            <input matInput formControlName="secondCtrl" placeholder="Ex. 1 Main St, New York, NY"
+                   required>
+          </mat-form-field>
+          <div>
+            <button mat-button matStepperPrevious>Back</button>
+            <button mat-button matStepperNext>Next</button>
+          </div>
+        </form>
+      </mat-step>
+      <mat-step [stepControl]="thirdFormGroup" [editable]="isEditable">
+        <form [formGroup]="thirdFormGroup">
+          <ng-template matStepLabel>Step 3</ng-template>
+          <mat-form-field>
+            <mat-label>Address</mat-label>
+            <input matInput formControlName="secondCtrl" placeholder="Ex. 1 Main St, New York, NY"
+                   required>
+          </mat-form-field>
+          <div>
+            <button mat-button matStepperPrevious>Back</button>
+            <button mat-button (click)="stepper.reset()">Submit</button>
+          </div>
+        </form>
+      </mat-step>    
+    </mat-horizontal-stepper>
+  </div>
+</div>
