@@ -16,6 +16,7 @@ import { MatInputModule } from '@angular/material/input';
 import { MatCardModule } from '@angular/material/card';
 import { CarouselModule } from 'ngx-bootstrap/carousel';
 import {MatGridListModule} from '@angular/material/grid-list';
+import { ModalModule,BsModalService, BsModalRef } from 'ngx-bootstrap/modal';
 
 const routes: Routes = [
   { path: '', redirectTo: '/home', pathMatch: 'full'},
@@ -53,9 +54,10 @@ const routes: Routes = [
     MatInputModule,
     MatCardModule,
     CarouselModule.forRoot(),
-    MatGridListModule
+    MatGridListModule,
+    ModalModule.forRoot()
   ],
-  providers: [RestUrlService],
+  providers: [RestUrlService,BsModalService, BsModalRef],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
