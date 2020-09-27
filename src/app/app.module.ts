@@ -13,7 +13,9 @@ import {MatStepperModule} from '@angular/material/stepper';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { FormsModule,ReactiveFormsModule } from '@angular/forms';
 import { MatInputModule } from '@angular/material/input';
+import { MatCardModule } from '@angular/material/card';
 import { CarouselModule } from 'ngx-bootstrap/carousel';
+import {MatGridListModule} from '@angular/material/grid-list';
 
 const routes: Routes = [
   { path: '', redirectTo: '/home', pathMatch: 'full'},
@@ -49,9 +51,11 @@ const routes: Routes = [
     ReactiveFormsModule,
     MatStepperModule,
     MatInputModule,
-    CarouselModule.forRoot()
+    MatCardModule,
+    CarouselModule.forRoot(),
+    MatGridListModule
   ],
-  providers: [],
+  providers: [RestUrlService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

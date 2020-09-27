@@ -14,6 +14,7 @@ export class HomeComponent implements OnInit {
   selectedSrc:any='';
   slidesChangeMessage:any = '';
   showMovieScreen:boolean=false;
+  activeSlideIndex = 0;
   slides = [
     {image: 'assets/img/1.jpg'},
     {image: 'assets/img/2.jpg'},

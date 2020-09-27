@@ -7,12 +7,18 @@ body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
     display: none !important;
 }
 mat-step-header .mat-step-label.mat-step-label-active {
-    background-color: red;
+    background-color: #FFF0D3;
     padding: 15px;
-    color: #fff !important;
+    color: #000 !important;
 }
-.mat-stepper-horizontal-line{
-    border-top-style: none !important;
+.submit-btn{
+    background-color: #FFF0D3;
+    border: #FFF0D3;  
+    padding:10px;
+    border-radius:3px;
+}
+.mat-card{
+    padding:20px !important; 
 }
 
 .carousel-indicators li{display:none;}

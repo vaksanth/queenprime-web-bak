@@ -1,6 +1,7 @@
 <div clas="row" *ngIf="!showMovieScreen">
   <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 mx-auto">
     <carousel [itemsPerSlide]="itemsPerSlideBanner"
+    [(activeSlide)]="activeSlideIndex"
     [singleSlideOffset]="singleSlideOffset"
     [noWrap]="!noWrap"
     [interval]="false"

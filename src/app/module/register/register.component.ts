@@ -17,13 +17,18 @@ export class RegisterComponent implements OnInit {
 
   ngOnInit(): void {
     this.firstFormGroup = this._formBuilder.group({
-      firstCtrl: ['', Validators.required]
+      emailId: ['', Validators.required],
+      mobileNumber: ['', Validators.required],
+      createPassword: ['', Validators.required],
+      confirmPassword: ['', Validators.required]
     });
     this.secondFormGroup = this._formBuilder.group({
-      secondCtrl: ['', Validators.required]
     });
     this.thirdFormGroup = this._formBuilder.group({
-      secondCtrl: ['', Validators.required]
+      cardName: ['', Validators.required],
+      cardNumber: ['', Validators.required],
+      expiryDate: ['', Validators.required],
+      cvv: ['', Validators.required]
     });
   }
 
