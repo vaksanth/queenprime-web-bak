@@ -1,7 +1,10 @@
 <div class="row" style="background:#fff">
   <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 mx-auto">
+    <h1 class="text-center"><strong>Register with three simple steps</strong></h1>
     <mat-horizontal-stepper linear #stepper class="col-lg-6 col-md-6 col-sm-6 col-xs-6 mx-auto">
+      
       <mat-step [stepControl]="firstFormGroup">
+        
         <form [formGroup]="firstFormGroup">
           <ng-template matStepLabel>Step 1</ng-template>
           <mat-form-field class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
@@ -23,7 +26,11 @@
           <div class="row">
             <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 mx-auto">
            <button class="submit-btn col-lg-12 col-md-12 col-sm-12 col-xs-12" color="primary" mat-raised-button matStepperNext type="submit" [disabled]="!firstFormGroup.valid">Next</button>
-           </div>
+           <div style="text-align: center;">
+            <a class="already" style="font-size: 15px;" href="#"><strong>Have Account</strong>? Login now.</a>
+          </div>
+        
+        </div>
            </div>
         </form>
       </mat-step>
@@ -36,34 +43,37 @@
           <br>
           <div class="row">
             <div class="col-lg-6 col-md-6 col-sm-6 col-xs-6">
-              <mat-card>
-                <mat-card-title>Simple Card Example</mat-card-title>
-                <mat-card-content>
-                  <p>
-                    Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-                    tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-                    quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-                    consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
-                    cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
-                    proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-                  </p>
-                </mat-card-content>
-              </mat-card>    
+              <button class="btn btn-outline-dark btn-block" type="button">
+                <div class="heading">
+                  <h1>Monthly Plan</h1>
+              </div>
+              <div class="price">
+                  <h2>₹150</h2>
+                  <p>1 User</p>
+              </div>
+              <div class="features">
+                  <h4><span class="feature">&nbsp;<i class="fa fa-check"></i></span><span>All features in basic</span></h4>
+                  <h4><span class="feature">&nbsp;<i class="fa fa-check"></i></span><span>Flexible cancel policy</span></h4>
+                  <h4><span class="feature">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<i class="fa fa-check"></i></span><span>unbeatable quality and price</span></h4>
+              </div>
+              </button>
               </div>
               <div class="col-lg-6 col-md-6 col-sm-6 col-xs-6">
-                <mat-card>
-                  <mat-card-title>Simple Card Example</mat-card-title>
-                  <mat-card-content>
-                    <p>
-                      Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-                      tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-                      quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-                      consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
-                      cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
-                      proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-                    </p>
-                  </mat-card-content>
-                </mat-card>    
+                <button class="btn btn-outline-dark btn-block" type="button">
+                <div class="heading">
+                    <h1>Monthly Plan</h1>
+                </div>
+                <div class="price">
+                    <h2>₹150</h2>
+                    <p>2User</p>
+                </div>
+                <div class="features">
+                    <h4><span class="feature">&nbsp;<i class="fa fa-check"></i></span><span>All features in basic</span></h4>
+                    <h4><span class="feature">&nbsp;<i class="fa fa-check"></i></span><span>Flexible cancel policy</span></h4>
+                    <h4><span class="feature">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<i class="fa fa-check"></i></span><span>unbeatable quality and price</span></h4>
+                </div>
+
+              </button>
                 </div>
           </div>   
           <br>
@@ -95,6 +105,10 @@
             <mat-label>CVV</mat-label>
             <input matInput formControlName="cvv" placeholder="CVV" required>
           </mat-form-field>
+          <div class="form-check">
+          &nbsp;&nbsp; &nbsp;&nbsp;
+            <input type="checkbox" class="form-check-input" id="exampleCheck1"><label class="form-check-label" for="exampleCheck1">By Clicking this you agree to our terms and conditions</label>
+          </div>
           <div class="row">
             <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 mx-auto">
            <button class="submit-btn col-lg-12 col-md-12 col-sm-12 col-xs-12" color="primary" mat-raised-button (click)="stepper.reset()" type="submit" [disabled]="!thirdFormGroup.valid">Subscribe</button>

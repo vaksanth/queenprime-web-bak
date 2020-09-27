@@ -28,7 +28,7 @@
               "src/assets"
             ],
             "styles": [
-              "./node_modules/bootstrap/dist/css/bootstrap.min.css",
+              
               "./node_modules/ngx-bootstrap/datepicker/bs-datepicker.css",
               "./node_modules/@angular/material/prebuilt-themes/indigo-pink.css",
               "src/styles.scss",
@@ -135,5 +135,8 @@
       }
     }
   },
-  "defaultProject": "queenprime-web"
+  "defaultProject": "queenprime-web",
+  "cli": {
+    "analytics": "21b131fa-a406-4881-af9e-2a51474c15d6"
+  }
 }
