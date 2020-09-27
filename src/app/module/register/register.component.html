@@ -26,8 +26,9 @@
           <div class="row">
             <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 mx-auto">
            <button class="submit-btn col-lg-12 col-md-12 col-sm-12 col-xs-12" color="primary" mat-raised-button matStepperNext type="submit" [disabled]="!firstFormGroup.valid">Next</button>
+           <br>
            <div style="text-align: center;">
-            <a class="already" style="font-size: 15px;" href="#"><strong>Have Account</strong>? Login now.</a>
+            <div class="already" style="font-size: 15px;" href="#"><strong class="text-dark">Have Account</strong>? <a class="text-warning">Login now.</a></div>
           </div>
         
         </div>
@@ -38,7 +39,7 @@
         <form [formGroup]="secondFormGroup">
           <ng-template matStepLabel>Step 2</ng-template>  
           <br>   
-          <button class="submit-btn" mat-button matStepperPrevious>Go Back</button>
+          <button class="btn btn-outline-warning" mat-button matStepperPrevious><i class="typcn typcn-arrow-left-thick"></i>&nbsp;Go Back</button>
           <br>
           <br>
           <div class="row">
@@ -65,7 +66,7 @@
                 </div>
                 <div class="price">
                     <h2>₹150</h2>
-                    <p>2User</p>
+                    <p>2 User</p>
                 </div>
                 <div class="features">
                     <h4><span class="feature">&nbsp;<i class="fa fa-check"></i></span><span>All features in basic</span></h4>
@@ -87,7 +88,7 @@
       <mat-step [stepControl]="thirdFormGroup">
         <form [formGroup]="thirdFormGroup">
           <ng-template matStepLabel>Step 3</ng-template>
-          <button class="submit-btn" mat-button matStepperPrevious>Go Back</button>
+          <button class="btn btn-outline-warning" mat-button matStepperPrevious><i class="typcn typcn-arrow-left-thick"></i>&nbsp;Go Back</button>
           <br>
           <mat-form-field class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
             <mat-label>Name as in Card</mat-label>
@@ -109,6 +110,7 @@
           &nbsp;&nbsp; &nbsp;&nbsp;
             <input type="checkbox" class="form-check-input" id="exampleCheck1"><label class="form-check-label" for="exampleCheck1">By Clicking this you agree to our terms and conditions</label>
           </div>
+          <br>
           <div class="row">
             <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 mx-auto">
            <button class="submit-btn col-lg-12 col-md-12 col-sm-12 col-xs-12" color="primary" mat-raised-button (click)="stepper.reset()" type="submit" [disabled]="!thirdFormGroup.valid">Subscribe</button>

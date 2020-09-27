@@ -18,7 +18,7 @@
      When you move the mouse over a link, the mouse arrow will turn into a little hand.</p>
      <br>
             <i style="font-size:24px" class="fa">&#xf144;</i>
-         <button type="button" class="btn text-white" (click)="">Play</button>&nbsp;&nbsp;
+         <button type="button" class="btn text-white" (click)="navigateTopage('video');">Play</button>&nbsp;&nbsp;
          |
          <i class="fa fa-info-circle" aria-hidden="true"></i>
          <button type="button" class="btn text-white">More Info
@@ -34,7 +34,7 @@
 <!-- Row 1 start-->
 <div class="row"  *ngIf="!showMovieScreen">
   <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
-    <h4 style="color:white;padding: 20px;font-family:verdana;"> Movie Lists</h4>
+    <h4 style="color:white;padding: 20px;font-family:verdana;"> Treanding Movie and TV shows</h4>
     </div>
 </div>
 <div clas="row"  *ngIf="!showMovieScreen">
@@ -55,7 +55,7 @@
 <!-- Row 2 Start-->
 <div class="row"  *ngIf="!showMovieScreen">
   <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
-    <h4 style="color:white;padding: 20px;font-family:verdana;"> Movie Lists 1</h4>
+    <h4 style="color:white;padding: 20px;font-family:verdana;">Action and advanture</h4>
     </div>
 </div>
 <div clas="row"  *ngIf="!showMovieScreen">
@@ -78,3 +78,29 @@
     </div>
     </div>
  <!-- Row 2 End-->
+ <!-- Row 3 Start-->
+<!--<div class="row"  *ngIf="!showMovieScreen">
+  <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+    <h4 style="color:white;padding: 20px;font-family:verdana;">Action and advanture</h4>
+    </div>
+</div>
+<div clas="row"  *ngIf="!showMovieScreen">
+  <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 mx-auto">
+    <carousel [itemsPerSlide]="itemsPerSlide"
+    [singleSlideOffset]="singleSlideOffset"
+    [noWrap]="!noWrap"
+    [interval]="false"
+    [startFromIndex]="5"
+    (slideRangeChange)="onSlideRangeChange($event)">
+    <slide *ngFor="let slide of slides; let index=index" class="mx-auto">
+  <img [src]="slide.image" alt="image slide" style="display: block; width: 90%;">    
+  </slide>
+  </carousel>
+  </div>
+</div>
+<div clas="row"  *ngIf="showMovieScreen">
+  <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 mx-auto">
+    <app-video-player [src]="selectedSrc" (cancelFunction)="cancel($event)"></app-video-player>
+    </div>
+    </div>-->
+ <!-- Row 3 End-->

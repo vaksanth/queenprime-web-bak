@@ -24,7 +24,8 @@ const routes: Routes = [
   { path: 'movies', component: MoviesComponent},
   { path: 'tv-shows', component: TvShowsComponent},
   { path: 'premium', component: PremiumComponent},
-  { path: 'register', component: RegisterComponent}
+  { path: 'register', component: RegisterComponent},
+  { path: 'video', component: VideoPlayerComponent}
   ];
   
   

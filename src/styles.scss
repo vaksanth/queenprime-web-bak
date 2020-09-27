@@ -11,18 +11,15 @@ mat-step-header .mat-step-label.mat-step-label-active {
     padding: 15px;
     color: #000 !important;
 }
-.submit-btn,.submit-btn:hover{
-    background-color: #FFF0D3;
+.submit-btn{
+    background-color: #D8A13E;
     border: #FFF0D3;  
     padding:10px;
     border-radius:3px;
+    color:black;
 }
 .mat-card{
     padding:20px !important; 
-}
-
-a{
-    cursor:pointer;
 }
 
 .carousel-indicators li{display:none;}
