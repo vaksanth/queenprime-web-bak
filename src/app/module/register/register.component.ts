@@ -9,6 +9,9 @@ import {MatStepperModule} from '@angular/material/stepper';
   styleUrls: ['./register.component.scss']
 })
 export class RegisterComponent implements OnInit {
+  showForm1:any=true;
+  showForm2:any=false;  
+  showForm3:any=false;
   /*firstFormGroup: FormGroup;
   secondFormGroup: FormGroup;
   thirdFormGroup: FormGroup;
@@ -32,5 +35,24 @@ export class RegisterComponent implements OnInit {
       cvv: ['', Validators.required]
     });*/
   }
+  showFirstForm()
+  {
+    this.showForm1=true;
+    this.showForm2=false;
+    this.showForm3=false;
+   
+  }
+  showSecondForm(){
+    this.showForm1=false;
+    this.showForm3=false;
+    this.showForm2=true;
+  }
+
+  showThirdForm(){
+    this.showForm1=false;
+    this.showForm2=false;
+    this.showForm3=true;
+  }
+  
 
 }

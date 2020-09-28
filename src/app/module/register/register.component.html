@@ -1,131 +1,173 @@
-<div class="row" style="background:#fff; height:570px;">
-  <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 mx-auto">
-    <!--<h1 class="text-center"><strong>Register with three simple steps</strong></h1>
-  
-    <mat-horizontal-stepper linear #stepper class="col-lg-6 col-md-6 col-sm-6 col-xs-6 mx-auto">
-    
-      <mat-step [stepControl]="firstFormGroup">
-        
-        <form [formGroup]="firstFormGroup">
-          <ng-template matStepLabel>Step 1</ng-template>
-          <mat-form-field class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
-            <mat-label>Enter your Email ID</mat-label>
-            <input matInput formControlName="emailId" placeholder="Enter Your Email ID" required>
-          </mat-form-field>
-          <mat-form-field class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
-            <mat-label>Enter your Mobile Number</mat-label>
-            <input matInput formControlName="mobileNumber" placeholder="Enter your Mobile Number" required>
-          </mat-form-field>       
-          <mat-form-field class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
-            <mat-label>Create Password</mat-label>
-            <input matInput formControlName="createPassword" placeholder="Create Password" required>
-          </mat-form-field>
-          <mat-form-field class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
-            <mat-label>Confirm Password</mat-label>
-            <input matInput formControlName="confirmPassword" placeholder="Confirm Password" required>
-          </mat-form-field>
-          <div class="row">
-            <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 mx-auto">
-           <button class="submit-btn col-lg-12 col-md-12 col-sm-12 col-xs-12" color="primary" mat-raised-button matStepperNext type="submit" [disabled]="!firstFormGroup.valid">Next</button>
-           <br>
-           <br>
-           <div style="text-align: center;">
-            <div class="already" style="font-size: 15px;" href="#"><strong class="text-dark">Have Account</strong>? <a class="text-warning">Login now.</a></div>
+<div class="row" style="background-color:black; height:570px;">
+  <div class="col-lg-8 col-md-8 col-sm-8 col-xs-8 mx-auto">
+    <div class="register-photo" style="background-color:black;">
+      <div class="form-container">
+        <form method="post" *ngIf="showForm1" >
+          <h2 class="text-center" style="font-family: Actor, sans-serif;color:white;font-size: 28px;">Register with three simple
+              steps</h2>
+          <div class="steps-progressbar">
+            <ul>
+              <li class="active">Step1</li>
+              <li>Step2</li>
+              <li>Step3</li>
+            </ul>
           </div>
-        
+          <div class="col-lg-6 col-md-6 col-sm-6 col-xs-6 mx-auto">
+          <div class="form-group" >
+            <label style="font-family: sans-serif;color:white;">Enter your Email ID
+              </label>
+              <input class="form-control" style="background-color: black; color:#ffffff;" type="email" name="email" placeholder="">
+          </div>
+          <div class="form-group">
+            <label style="font-family: sans-serif;color:white;">Enter your Mobile Number
+              </label>
+              <input class="form-control" style="background-color: black; color:#ffffff;" type="number" name="mobile" placeholder="">
+          </div>
+          <div class="form-group">
+            <label style="font-family: sans-serif;color:white;">Create Password
+              </label>
+              <input class="form-control" style="background-color: black; color:#ffffff;" type="password" name="Create Password" placeholder="">
+          </div>
+          <div class="form-group">
+            <label style="font-family: sans-serif;color:white;">Confirm Password
+              </label>
+              <input class="form-control" style="background-color: black; color:#ffffff;" type="password" name="Confirm Password" placeholder="">
+          </div>
+          <div class="form-group" >
+            <button class="btn btn-block" style="background-color: #E1BC79;" type="button" (click)="showSecondForm()" >Next</button>
+          </div>
+          <a class="already d-flex justify-content-center" style="  font-size: 15px;color: #E1BC79;" href="#"><strong style="color: white;">Have Account ?</strong>&nbsp;&nbsp; Login now.</a>
         </div>
-           </div>
         </form>
-      </mat-step>
+     
       
-      <mat-step [stepControl]="secondFormGroup">
-        
-        <form [formGroup]="secondFormGroup">
-         
-          <ng-template matStepLabel>Step 2</ng-template>  
-          <br>   
-          
-          <button class="btn btn-outline-warning" mat-button matStepperPrevious><i class="typcn typcn-arrow-left-thick"></i>&nbsp;Go Back</button>
-          <br>
-          <br>
-          <div class="row">
-            <div class="col-lg-6 col-md-6 col-sm-6 col-xs-6">
-              <button class="btn btn-outline-dark btn-block" type="button">
-                <div class="heading">
-                  <h1>Monthly Plan</h1>
-              </div>
-              <div class="price">
-                  <h2>₹150</h2>
-                  <p>1 User</p>
-              </div>
-              <div class="features">
-                  <h4><span class="feature">&nbsp;<i class="fa fa-check"></i></span><span>All features in basic</span></h4>
-                  <h4><span class="feature">&nbsp;<i class="fa fa-check"></i></span><span>Flexible cancel policy</span></h4>
-                  <h4><span class="feature">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<i class="fa fa-check"></i></span><span>unbeatable quality and price</span></h4>
-              </div>
-              </button>
-              </div>
-              <div class="col-lg-6 col-md-6 col-sm-6 col-xs-6">
-                <button class="btn btn-outline-dark btn-block" type="button">
-                <div class="heading">
-                    <h1>Monthly Plan</h1>
-                </div>
-                <div class="price">
-                    <h2>₹150</h2>
-                    <p>2 User</p>
-                </div>
-                <div class="features">
-                    <h4><span class="feature">&nbsp;<i class="fa fa-check"></i></span><span>All features in basic</span></h4>
-                    <h4><span class="feature">&nbsp;<i class="fa fa-check"></i></span><span>Flexible cancel policy</span></h4>
-                    <h4><span class="feature">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<i class="fa fa-check"></i></span><span>unbeatable quality and price</span></h4>
-                </div>
+      
 
-              </button>
+
+
+        <div class="block-heading" *ngIf="showForm2">
+        <h2 class="text-center" style="font-family: Actor, sans-serif; color:white;font-size: 28px;">Select your plan</h2>
+        <div class="steps-progressbar">
+          <ul>
+            <li class="previous">Step1</li>
+            <li class="active">Step2</li>
+            <li>Step3</li>
+          </ul>
+        </div>
+        <div class="row justify-content-center">
+            <div class="col-md-5 col-lg-4">
+                <div class="clean-pricing-item">
+                  <div>
+                 <br>
+                   <br>
+                   <br>
+                 </div>
+                    <button class="btn btn-outline-light btn-block" type="button">
+                      <div class="heading">
+                        <h1><b>Yearly Plan</b></h1>
+                    </div>
+                    <div class="price">
+                        <h2><b>₹999</b></h2>
+                        <p>2 User</p>
+                    </div>
+                    <div class="features">
+                        <h4><span class="feature">&nbsp;<i class="fa fa-check"></i></span><span>All features in basic</span></h4>
+                        <h4><span class="feature">&nbsp;<i class="fa fa-check"></i></span><span>Flexible cancel policy</span></h4>
+                        <h4><span class="feature">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<i class="fa fa-check"></i></span><span>unbeatable quality and price</span></h4>
+                    </div>
+                    </button></div>
+            </div>
+            <div class="col-md-5 col-lg-4">
+                <div class="clean-pricing-item">
+                 
+                  <div>
+                   <br>
+                   <br>
+                   <br>
+                 </div>
+                    <button class="btn btn-outline-light btn-block" type="button">
+                    <div class="heading">
+                        <h1><b>Monthly Plan</b></h1>
+                    </div>
+                    <div class="price">
+                        <h2><b>₹150</b></h2>
+                        <p>1 User</p>
+                    </div>
+                    <div class="features">
+                        <h4><span class="feature">&nbsp;<i class="fa fa-check"></i></span><span>All features in basic</span></h4>
+                        <h4><span class="feature">&nbsp;<i class="fa fa-check"></i></span><span>Flexible cancel policy</span></h4>
+                        <h4><span class="feature">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<i class="fa fa-check"></i></span><span>unbeatable quality and price</span></h4>
+                    </div>
+
+                  </button>
+
                 </div>
-          </div>   
-          <br>
-          <div class="row">
-            <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 mx-auto">
-           <button class="submit-btn col-lg-12 col-md-12 col-sm-12 col-xs-12" color="primary" mat-raised-button matStepperNext type="submit">Next</button>
-           </div>
-           </div>
-        </form>
-      </mat-step>
-      <mat-step [stepControl]="thirdFormGroup">
-        <form [formGroup]="thirdFormGroup">
-          <ng-template matStepLabel>Step 3</ng-template>
-          <button class="btn btn-outline-warning" mat-button matStepperPrevious><i class="typcn typcn-arrow-left-thick"></i>&nbsp;Go Back</button>
-          <br>
-          <mat-form-field class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
-            <mat-label>Name as in Card</mat-label>
-            <input matInput formControlName="cardName" placeholder="Name as in Card" required>
-          </mat-form-field>
-          <mat-form-field class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
-            <mat-label>Card Number</mat-label>
-            <input matInput formControlName="cardNumber" placeholder="Card Number" required>
-          </mat-form-field>       
-          <mat-form-field class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
-            <mat-label>Expiry Date</mat-label>
-            <input matInput formControlName="expiryDate" placeholder="MM/YY" required>
-          </mat-form-field>
-          <mat-form-field class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
-            <mat-label>CVV</mat-label>
-            <input matInput formControlName="cvv" placeholder="CVV" required>
-          </mat-form-field>
-          <div class="form-check">
-          &nbsp;&nbsp; &nbsp;&nbsp;
-            <input type="checkbox" class="form-check-input" id="exampleCheck1"><label class="form-check-label" for="exampleCheck1">By Clicking this you agree to our terms and conditions</label>
+                
+            </div>
+            <div class="col-12 col-md-8">
+              <br>
+              <br>
+
+               <div class="form-group">
+          <button class="btn btn-block" style="background-color: #E1BC79;" type="submit" (click)="showThirdForm()">Next</button>
+        </div>
+              </div>
+
+        </div>
+      </div>
+
+              
+
+
+
+
+
+
+        <form method="post" *ngIf="showForm3">
+          <h2 class="text-center" style="font-family: Actor, sans-serif;color:white;">Enter your credit or debit card details</h2>
+          <div class="steps-progressbar">
+            <ul>
+                <li class="previous">Step1</li>
+                <li class="previous">Step2</li>
+                <li class="active">Step3</li>
+            </ul>
+        </div>
+        <div class="col-lg-6 col-md-6 col-sm-6 col-xs-6 mx-auto">
+         <div class="form-group">
+            <label style="font-family: sans-serif;color:white;">Name as in Card
+            </label>
+            <input class="form-control" style="background-color: black; color:#ffffff;" type="email" name="email" placeholder="">
           </div>
-          <br>
-          <div class="row">
-            <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 mx-auto">
-           <button class="submit-btn col-lg-12 col-md-12 col-sm-12 col-xs-12" color="primary" mat-raised-button (click)="stepper.reset()" type="submit" [disabled]="!thirdFormGroup.valid">Subscribe</button>
-           </div>
-           </div>
+          <div class="form-group">
+            <label style="font-family: sans-serif;color:white;">Card Number
+            </label>
+            <input class="form-control" style="background-color: black; color:#ffffff;" type="number" name="mobile" placeholder="">
+          </div>
+          <div class="form-group">
+             <label style="font-family: sans-serif;color:white;">Expiry Date
+            </label>
+            <input class="form-control" style="background-color: black; color:#ffffff;" type="month">
+        </div>
+          <div class="form-group">
+            <label style="font-family: sans-serif;color:white;">CVV
+            </label>
+            <input class="form-control" style="background-color: black; color:#ffffff;" type="number" name="cvv" placeholder="">
+          </div>
+          <div class="form-check">
+            <input type="checkbox" class="form-check-input" id="exampleCheck1"><label class="form-check-label" for="exampleCheck1" style="font-family: sans-serif;color:white;">By Clicking this you agree to our terms and conditions</label>
+            <br>
+            <br>
+            
+          </div>
+          <div class="form-group"><button class="btn btn-block"  style="background-color: #E1BC79;" type="button" (click)="showFirstForm()">Subscribe</button></div>
+        </div>
         </form>
-      </mat-step>           
-    </mat-horizontal-stepper>-->
-  </div>
+
+      </div>
+    </div>
+
+    
+
+
 </div>
-
-
+</div>
