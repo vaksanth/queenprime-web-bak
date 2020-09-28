@@ -1,8 +1,9 @@
-<div class="row" style="background:#fff">
+<div class="row" style="background:#fff; height:570px;">
   <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 mx-auto">
     <h1 class="text-center"><strong>Register with three simple steps</strong></h1>
+  
     <mat-horizontal-stepper linear #stepper class="col-lg-6 col-md-6 col-sm-6 col-xs-6 mx-auto">
-      
+    
       <mat-step [stepControl]="firstFormGroup">
         
         <form [formGroup]="firstFormGroup">
@@ -27,6 +28,7 @@
             <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 mx-auto">
            <button class="submit-btn col-lg-12 col-md-12 col-sm-12 col-xs-12" color="primary" mat-raised-button matStepperNext type="submit" [disabled]="!firstFormGroup.valid">Next</button>
            <br>
+           <br>
            <div style="text-align: center;">
             <div class="already" style="font-size: 15px;" href="#"><strong class="text-dark">Have Account</strong>? <a class="text-warning">Login now.</a></div>
           </div>
@@ -35,10 +37,14 @@
            </div>
         </form>
       </mat-step>
+      
       <mat-step [stepControl]="secondFormGroup">
+        
         <form [formGroup]="secondFormGroup">
+         
           <ng-template matStepLabel>Step 2</ng-template>  
           <br>   
+          
           <button class="btn btn-outline-warning" mat-button matStepperPrevious><i class="typcn typcn-arrow-left-thick"></i>&nbsp;Go Back</button>
           <br>
           <br>
@@ -121,3 +127,5 @@
     </mat-horizontal-stepper>
   </div>
 </div>
+
+

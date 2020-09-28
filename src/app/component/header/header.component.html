@@ -1,4 +1,4 @@
-<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+<nav class="navbar navbar-expand-lg navbar-dark" style="height:80px;background-color: black;">
   <a class="navbar-brand" href="#"> <img src="assets/img/logo.png" alt="" width="100" height="50"></a>
   <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarText"
     aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation">
@@ -32,8 +32,9 @@
               Login/Register
             </button>
             <ng-template #template>
-              <div class="modal-header bg-warning">
-                <h4 class="modal-title" style="color:black;">Login</h4>
+              <div class="modal-header" style="background-color:#EBC684;">
+                
+                <h1 class="modal-title" style="color:black;margin-left:200px;"><b>Login</b></h1>
                 <button type="button" class="close pull-right" aria-label="Close" (click)="modalRef.hide()">
                   <span aria-hidden="true">&times;</span>
                 </button>
@@ -43,34 +44,35 @@
                   <label for="num" style="color:black;"><b>Enter your Phone Number or Email</b></label>
                   <br>
                   <br>
-                  <input type="text" style="width: 75%; height: 75%;" placeholder="Enter your Phone Number or Email"
+                  <input type="text" class="form-control" style="width: 75%; height: 75%; margin-left:60px;" placeholder="Enter your Phone Number or Email"
                     name="num" required>
                   <br>
-                  <br>
+                
                   <button type="button" class="btn btn-warning" (click)="openTemplateOtp()"
-                    style="width: 75%;">Login</button>
-                  <br>                
+                    style="width: 75%;background-color:#EBC684">Login</button>
+                  <br>   
+                  <br>             
                   <p style="color:black;">By Signing in you accept to our terms and conditions</p>
                   <br>
-                  <b style="color:black;">New User?</b>&nbsp;<a class="text-warning"
+                  <b style="color:black;">New User?</b>&nbsp;<a class="text-warning" style="color:#E2BF7F;"
                     (click)="close();navigateTopage('register');">Register here</a>
+                  <br>
                   <br>
                 </div>
                 <div style="text-align: center;" *ngIf="showOtp">
                   <label for="num" style="color:black;"><b>Enter OTP sent to your Phone Number</b></label>
                   <br>
                   <br>
-                  <input type="text" style="width: 75%; height: 75%;"
-                    placeholder="Enter OTP sent to your Phone Number" name="num" required>
+                  <input type="text"  class="form-control" style="width: 75%; height: 75%;margin-left:60px;" placeholder="Enter OTP sent to your Phone Number" name="num" required>
                   <br>
-                  <br>
+                 
                   <button type="button" class="btn btn-warning" data-toggle="modal1" data-target="#myModal1"
-                    style="width: 75%;">Enter</button>
+                    style="width: 75%; background-color:#EBC684;">Enter</button>
                   <br><br>
                   <p style="color:black;">By Signing in you accept to our terms and conditions</p>
                   <br>
                   <b style="color:black;">New User?</b>&nbsp;
-                  <a class="text-warning" (click)="close(); navigateTopage('register');">Register
+                  <a class="text-warning" style="color:#EBC684;"(click)="close(); navigateTopage('register');">Register
                     here</a>
                   <br>
                 </div>
