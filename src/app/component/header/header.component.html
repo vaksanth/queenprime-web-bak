@@ -1,5 +1,6 @@
-<nav class="navbar navbar-expand-lg navbar-dark" style="height:80px;background-color: black;">
-  <a class="navbar-brand" href="#"> <img src="assets/img/logo.png" alt="" width="100" height="50"></a>
+<nav class="navbar navbar-expand-lg navbar-dark" style="height:80px;background-color: black;border:black;overflow: hidden;">
+  <a class="navbar-brand" href="#">
+  <img src="assets/img/logo1.png" alt="" width="40" height="40"> <img src="assets/img/logo.png" alt="" width="150" height="50"></a>
   <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarText"
     aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation">
     <span class="navbar-toggler-icon"></span>
@@ -7,10 +8,10 @@
   <div class="collapse navbar-collapse" id="navbarText">
     <ul class="navbar-nav mr-auto">
       <li class="nav-item active">
-        <a class="nav-link" (click)="navigateTopage('home');">Home <span class="sr-only">(current)</span></a>
+        <a class="nav-link" style="color:#EBC684;"(click)="navigateTopage('home');">Home <span class="sr-only">(current)</span></a>
       </li>
       <li class="nav-item">
-        <a class="nav-link" (click)="navigateTopage('movies');">Movies</a>
+        <a class="nav-link"  (click)="navigateTopage('movies');">Movies</a>
       </li>
       <li class="nav-item">
         <a class="nav-link" (click)="navigateTopage('tv-shows');">TV Shows</a>
@@ -24,56 +25,78 @@
     <span class="navbar-text">
       <form class="form-inline my-2 my-lg-0">
 
-        <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
+        <div class="form-group has-search">
+          
+          <input type="text" class="form-control" style="background-color:#403f3f;color: #ffffff;border:black" placeholder="Search...">&nbsp;&nbsp;
+          <span class="fa fa-search form-control-feedback" style="font-size: 15px;"></span>
+        </div>
+        &nbsp;
+        &nbsp;
         <ul class="navbar-nav mr-auto">
           <li class="nav-item active">
             <!--<a class="nav-link" href="#">Login/Register</a>-->
-            <button type="button" class="btn btn btn-dark" (click)="openModal(template)">
+            <button type="button" class="btn btn btn-dark" style="font-size:14px; background-color: black;"(click)="openModal(template)">
               Login/Register
             </button>
             <ng-template #template>
-              <div class="modal-header" style="background-color:#EBC684;">
+              <div class="modal-header"style="background-color: black;border-color: black;" >
                 
-                <h1 class="modal-title" style="color:black;margin-left:200px;"><b>Login</b></h1>
-                <button type="button" class="close pull-right" aria-label="Close" (click)="modalRef.hide()">
+                <div style="margin-left:150px;"><img src="assets/img/logo1.png" alt="" width="40" height="40"> <img src="assets/img/logo.png" alt="" width="150" height="50">
+                </div>
+                
+                <button type="button" class="close pull-right" aria-label="Close" style="color:white" (click)="modalRef.hide()">
                   <span aria-hidden="true">&times;</span>
+                  
                 </button>
+              
+                
               </div>
-              <div class="modal-body">
-                <div style="text-align: center;" *ngIf="!showOtp">
-                  <label for="num" style="color:black;"><b>Enter your Phone Number or Email</b></label>
+              <div class="modal-body" style="background-color: black;border-color: black;">
+                <div>
+                  <p style="color:white;font-size: 24px;margin: 20px;">Login</p>
+                </div>
+                <br>
+                <br>
+                <br>
+   
+                <div *ngIf="!showOtp">
+                  <label for="num" style="color:#ebebeb;margin-left: 20px;">Enter your Phone Number or Email</label>
                   <br>
                   <br>
-                  <input type="text" class="form-control" style="width: 75%; height: 75%; margin-left:60px;" placeholder="Enter your Phone Number or Email"
+                  <input type="text" class="form-control" style="width: 90%; height: 75%;  background-color: black; color:white;margin-left: 20px;" placeholder="Enter your Phone Number or Email"
                     name="num" required>
                   <br>
                 
                   <button type="button" class="btn btn-warning" (click)="openTemplateOtp()"
-                    style="width: 75%;background-color:#EBC684">Login</button>
+                    style="width: 90%;background-color:#EBC684;margin-left: 20px;">Login</button>
                   <br>   
                   <br>             
-                  <p style="color:black;">By Signing in you accept to our terms and conditions</p>
+                  <p class="text-center" style="color:white;">By Signing in you accept to our terms and conditions</p>
                   <br>
-                  <b style="color:black;">New User?</b>&nbsp;<a class="text-warning" style="color:#E2BF7F;"
+                  <div class="text-center">
+                  <a style="color:white;">New User?</a>&nbsp;<a class="text-warning" style="color:#E2BF7F;"
                     (click)="close();navigateTopage('register');">Register here</a>
+                  </div>
                   <br>
                   <br>
                 </div>
-                <div style="text-align: center;" *ngIf="showOtp">
-                  <label for="num" style="color:black;"><b>Enter OTP sent to your Phone Number</b></label>
+                <div  *ngIf="showOtp">
+                  <label for="num" style="color:#ebebeb;margin-left: 20px;">Enter OTP sent to your Phone Number</label>
                   <br>
                   <br>
-                  <input type="text"  class="form-control" style="width: 75%; height: 75%;margin-left:60px;" placeholder="Enter OTP sent to your Phone Number" name="num" required>
+                  <input type="text"  class="form-control"  style="width: 90%; height: 75%;  background-color: black; color:white;margin-left: 20px;" placeholder="Enter OTP sent to your Phone Number" name="num" required>
                   <br>
                  
                   <button type="button" class="btn btn-warning" data-toggle="modal1" data-target="#myModal1"
-                    style="width: 75%; background-color:#EBC684;">Enter</button>
+                  style="width: 90%;background-color:#EBC684;margin-left: 20px;">Enter</button>
                   <br><br>
-                  <p style="color:black;">By Signing in you accept to our terms and conditions</p>
+                  <p class="text-center" style="color:white;">By Signing in you accept to our terms and conditions</p>
                   <br>
-                  <b style="color:black;">New User?</b>&nbsp;
-                  <a class="text-warning" style="color:#EBC684;"(click)="close(); navigateTopage('register');">Register
+                  <div class="text-center">
+                  <a style="color:white;">New User?</a>&nbsp;
+                  <a class="text-warning" style="color:#E2BF7F;"(click)="close(); navigateTopage('register');">Register
                     here</a>
+                </div>
                   <br>
                 </div>
               </div>

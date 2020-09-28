@@ -8,20 +8,20 @@
     [startFromIndex]="5"
     (slideRangeChange)="onSlideRangeChange($event)">
     <slide *ngFor="let slide of slides; let index=index" class="mx-auto">
-  <img [src]="slide.image" alt="image slide" style="display: block; width: 100%;"> 
+  <img [src]="slide.image" alt="image slide" style="display: block; width: 100%; height:500px; object-fit: cover;"> 
   
   <div class="carousel-caption d-none d-md-block" style="text-align: justify">
     <h1>Master</h1>
-    <h2 style="color:white;">Action | Drama</h2>
-    <h3>You can click on a link and jump to another document.<br>
+    <h2 style="font-family: Univia Pro;  color: #DEE4E7;">Action | Drama</h2>
+    <h3 style="color:white">You can click on a link and jump to another document.<br>
 
      When you move the mouse over a link, the mouse arrow will turn into a little hand.</h3>
      <br>
             <i style="font-size:24px" class="fa">&#xf144;</i>
-         <button type="button" class="btn text-white" (click)="navigateTopage('video');" style="font-size: 22px;">Play</button>&nbsp;&nbsp;
-         |&nbsp;&nbsp;
-         <i class="fa fa-info-circle" aria-hidden="true"  style="font-size: 18px;"></i>
-         <button type="button" class="btn text-white" style="font-size: 22px;">More Info
+         <button type="button" class="btn text-white" (click)="navigateTopage('video');" style="font-size: 20px;">Play</button>&nbsp;&nbsp;
+         <b style="font-size:24px;">|</b>&nbsp;&nbsp;
+         <i class="fa fa-info-circle" aria-hidden="true"  style="font-size: 20px;"></i>
+         <button type="button" class="btn text-white" style="font-size: 20px;">More Info
          </button>
 
 
@@ -46,7 +46,7 @@
     [startFromIndex]="5"
     (slideRangeChange)="onSlideRangeChange($event)">
     <slide *ngFor="let slide of slides; let index=index" class="mx-auto">
-  <img [src]="slide.image" alt="image slide" style="display: block; width: 90%;" (click)="showMovie(slide)">    
+  <img [src]="slide.image" alt="image slide" style="display: block; width: 450px;height:200px" (click)="showMovie(slide)">    
   </slide>
   </carousel>
   </div>
@@ -67,7 +67,7 @@
     [startFromIndex]="5"
     (slideRangeChange)="onSlideRangeChange($event)">
     <slide *ngFor="let slide of slides; let index=index" class="mx-auto">
-  <img [src]="slide.image" alt="image slide" style="display: block; width: 90%;">    
+      <img [src]="slide.image" alt="image slide" style="display: block; width: 450px;height:200px" (click)="showMovie(slide)">    
   </slide>
   </carousel>
   </div>
@@ -81,7 +81,7 @@
  <!-- Row 3 Start-->
 <!--<div class="row"  *ngIf="!showMovieScreen">
   <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
-    <h4 style="color:white;padding: 20px;font-family:verdana;">Action and advanture</h4>
+    <h4 style="color:white;padding: 20px;font-family:verdana;">Thriller</h4>
     </div>
 </div>
 <div clas="row"  *ngIf="!showMovieScreen">
@@ -93,7 +93,7 @@
     [startFromIndex]="5"
     (slideRangeChange)="onSlideRangeChange($event)">
     <slide *ngFor="let slide of slides; let index=index" class="mx-auto">
-  <img [src]="slide.image" alt="image slide" style="display: block; width: 90%;">    
+      <img [src]="slide.image" alt="image slide" style="display: block; width: 450px;height:200px" (click)="showMovie(slide)">      
   </slide>
   </carousel>
   </div>

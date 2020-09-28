@@ -20,15 +20,15 @@ import { Router } from '@angular/router';
     showMovieScreen:boolean=false;
     activeSlideIndex = 0;
     slides = [
-      {image: 'assets/img/1.jpg'},
-      {image: 'assets/img/2.jpg'},
-      {image: 'assets/img/3.jpg'},
-      {image: 'assets/img/1.jpg'},
-      {image: 'assets/img/2.jpg'},
-      {image: 'assets/img/3.jpg'},
-      {image: 'assets/img/1.jpg'},
-      {image: 'assets/img/2.jpg'},
-      {image: 'assets/img/3.jpg'}
+      {image: 'assets/img/slider.png'},
+      {image: 'assets/img/slider2.png'},
+      {image: 'assets/img/slider3.png'},
+      {image: 'assets/img/slider.png'},
+      {image: 'assets/img/slider2.png'},
+      {image: 'assets/img/slider3.png'},
+      {image: 'assets/img/slider.png'},
+      {image: 'assets/img/slider2.png'},
+      {image: 'assets/img/slider3.png'}
     ];
    
     onSlideRangeChange(indexes: number[]): void {
