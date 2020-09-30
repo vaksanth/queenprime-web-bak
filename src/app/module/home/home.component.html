@@ -32,76 +32,347 @@
     </div>
 </div>
 
-<!-- Row 1 start-->
-<div class="row"  *ngIf="!showMovieScreen">
-  <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+
+    
+ <!--Carousel Wrapper-->
+ <div id="multi-item-example" class="carousel slide carousel-multi-item" data-ride="carousel" *ngIf="!showMovieScreen">
+
+     
+  <!--Indicators-->
+  <div>
     <h4 style="color:white;padding: 20px;font-family:verdana;"> Treanding Movie and TV shows</h4>
-    </div>
-</div>
-<div clas="row"  *ngIf="!showMovieScreen">
-  <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 mx-auto">
-    <carousel [itemsPerSlide]="itemsPerSlide"
-    [singleSlideOffset]="singleSlideOffset"
-    [noWrap]="!noWrap"
-    [interval]="false"
-    [startFromIndex]="5"
-    (slideRangeChange)="onSlideRangeChange($event)">
-    <slide *ngFor="let slide of slides; let index=index" class="mx-auto">
-  <img [src]="slide.image" alt="image slide" style="display: block; width: 450px;height:200px" (click)="showMovie(slide)">    
-  </slide>
-  </carousel>
   </div>
-</div>
-<!-- Row 1 End-->
-<!-- Row 2 Start-->
-<div class="row"  *ngIf="!showMovieScreen">
-  <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
-    <h4 style="color:white;padding: 20px;font-family:verdana;">Action and advanture</h4>
-    </div>
-</div>
-<div clas="row"  *ngIf="!showMovieScreen">
-  <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 mx-auto">
-    <carousel [itemsPerSlide]="itemsPerSlide"
-    [singleSlideOffset]="singleSlideOffset"
-    [noWrap]="!noWrap"
-    [interval]="false"
-    [startFromIndex]="5"
-    (slideRangeChange)="onSlideRangeChange($event)">
-    <slide *ngFor="let slide of slides; let index=index" class="mx-auto">
-      <img [src]="slide.image" alt="image slide" style="display: block; width: 450px;height:200px" (click)="showMovie(slide)">    
-  </slide>
-  </carousel>
+
+  <!--/.Indicators-->
+
+  <!--Slides-->
+                  <div class="carousel-inner" role="listbox">
+
+                    <!--First slide-->
+                    <div class="carousel-item active">
+
+                      <div class="col-md-3" style="float:left">
+                       <div class="card mb-2">
+                          <img class="card-img-top" src="assets/img/master.jfif" alt="Card image cap"  width="150" height="300" (click)="showMovie()" >
+                        </div>
+                      </div>
+
+                      <div class="col-md-3" style="float:left">
+                        <div class="card mb-2">
+                          <img class="card-img-top"src="assets/img/thambi.jpg" alt="Card image cap"  width="150" height="300">
+                           </div>
+                      </div>
+
+                      <div class="col-md-3" style="float:left">
+                        <div class="card mb-2">
+                          <img class="card-img-top" src="assets/img/BlackWidow.jpg" alt="Card image cap"  width="150" height="300">
+                           </div>
+                      </div>
+                      
+                      <!--<div class="col-md-3" style="float:left">
+                        <div class="card mb-2">
+                          <img class="card-img-top"
+                            src="https://mdbootstrap.com/img/Photos/Horizontal/City/4-col/img%20(60).jpg" alt="Card image cap">
+                          <div class="card-body">
+                            <h4 class="card-title">Card title</h4>
+                            <p class="card-text">Some quick example text to build on the card title and make up the bulk of the
+                              card's content.</p>
+                            <a class="btn btn-primary">Button</a>
+                          </div>
+                        </div>
+                      </div>-->
+                      
+                       <div class="col-md-3" style="float:left">
+                       <div class="card mb-2">
+                          <img class="card-img-top" src="assets/img/master.jfif" alt="Card image cap"  width="150" height="300">
+                        </div>
+                      </div>
+
+                    </div>
+                    <!--/.First slide-->
+
+                    <!--Second slide-->
+                    <div class="carousel-item">
+
+                      <div class="col-md-3" style="float:left">
+                       <div class="card mb-2">
+                          <img class="card-img-top" src="assets/img/master.jfif" alt="Card image cap"  width="150" height="300">
+                        </div>
+                      </div>
+
+                      <div class="col-md-3" style="float:left">
+                        <div class="card mb-2">
+                          <img class="card-img-top"src="assets/img/thambi.jpg" alt="Card image cap"  width="150" height="300">
+                           </div>
+                      </div>
+
+                      <div class="col-md-3" style="float:left">
+                        <div class="card mb-2">
+                          <img class="card-img-top" src="assets/img/BlackWidow.jpg" alt="Card image cap"  width="150" height="300">
+                           </div>
+                      </div>
+                      
+                     <div class="col-md-3" style="float:left">
+                       <div class="card mb-2">
+                          <img class="card-img-top" src="assets/img/master.jfif" alt="Card image cap"  width="150" height="300">
+                        </div>
+                      </div>
+                    </div>
+                    <!--/.Second slide-->
+
+                   
+
+                  </div>
+                  <!--/.Slides-->
+
+                   <a class="carousel-control-prev" href="#multi-item-example" role="button" data-slide="prev">
+                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                    <span class="sr-only">Previous</span>
+                  </a>
+                  <a class="carousel-control-next" href="#multi-item-example" role="button" data-slide="next">
+                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                    <span class="sr-only">Next</span>
+                  </a>
+
+                </div>
+<!--/.Carousel Wrapper-->
+
+
+
+
+
+
+
+
+
+
+
+
+
+ <!--Carousel Wrapper-->
+    <div id="multi-item-example1" class="carousel slide carousel-multi-item" data-ride="carousel" *ngIf="!showMovieScreen">
+
+     
+  <!--Indicators-->
+  <div>
+    <h4 style="color:white;padding: 20px;font-family:verdana;"> Action and advanture</h4>
   </div>
-</div>
+
+  <!--/.Indicators-->
+
+  <!--Slides-->
+                <div class="carousel-inner" role="listbox">
+
+                    <!--First slide-->
+                    <div class="carousel-item active">
+
+                      <div class="col-md-3" style="float:left">
+                       <div class="card mb-2">
+                          <img class="card-img-top" src="assets/img/master.jfif" alt="Card image cap"  width="150" height="300">
+                        </div>
+                      </div>
+
+                      <div class="col-md-3" style="float:left">
+                        <div class="card mb-2">
+                          <img class="card-img-top"src="assets/img/thambi.jpg" alt="Card image cap"  width="150" height="300">
+                           </div>
+                      </div>
+
+                      <div class="col-md-3" style="float:left">
+                        <div class="card mb-2">
+                          <img class="card-img-top" src="assets/img/BlackWidow.jpg" alt="Card image cap"  width="150" height="300">
+                           </div>
+                      </div>
+                      
+                      <!--<div class="col-md-3" style="float:left">
+                        <div class="card mb-2">
+                          <img class="card-img-top"
+                            src="https://mdbootstrap.com/img/Photos/Horizontal/City/4-col/img%20(60).jpg" alt="Card image cap">
+                          <div class="card-body">
+                            <h4 class="card-title">Card title</h4>
+                            <p class="card-text">Some quick example text to build on the card title and make up the bulk of the
+                              card's content.</p>
+                            <a class="btn btn-primary">Button</a>
+                          </div>
+                        </div>
+                      </div>-->
+                      
+                       <div class="col-md-3" style="float:left">
+                       <div class="card mb-2">
+                          <img class="card-img-top" src="assets/img/master.jfif" alt="Card image cap"  width="150" height="300">
+                        </div>
+                      </div>
+
+                    </div>
+                    <!--/.First slide-->
+
+                    <!--Second slide-->
+                    <div class="carousel-item">
+
+                      <div class="col-md-3" style="float:left">
+                       <div class="card mb-2">
+                          <img class="card-img-top" src="assets/img/master.jfif" alt="Card image cap"  width="150" height="300">
+                        </div>
+                      </div>
+
+                      <div class="col-md-3" style="float:left">
+                        <div class="card mb-2">
+                          <img class="card-img-top"src="assets/img/thambi.jpg" alt="Card image cap"  width="150" height="300">
+                           </div>
+                      </div>
+
+                      <div class="col-md-3" style="float:left">
+                        <div class="card mb-2">
+                          <img class="card-img-top" src="assets/img/BlackWidow.jpg" alt="Card image cap"  width="150" height="300">
+                           </div>
+                      </div>
+                      
+                     <div class="col-md-3" style="float:left">
+                       <div class="card mb-2">
+                          <img class="card-img-top" src="assets/img/master.jfif" alt="Card image cap"  width="150" height="300">
+                        </div>
+                      </div>
+                    </div>
+                    <!--/.Second slide-->
+
+                   
+
+
+                   
+
+                  </div>
+                  <!--/.Slides-->
+
+                   <a class="carousel-control-prev" href="#multi-item-example1" role="button" data-slide="prev">
+                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                    <span class="sr-only">Previous</span>
+                  </a>
+                  <a class="carousel-control-next" href="#multi-item-example1" role="button" data-slide="next">
+                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                    <span class="sr-only">Next</span>
+                  </a>
+
+                </div>
+<!--/.Carousel Wrapper-->
+
+
+
+
+
+
+
+
+
+ <!--Carousel Wrapper-->
+    <div id="multi-item-example2" class="carousel slide carousel-multi-item" data-ride="carousel" *ngIf="!showMovieScreen">
+
+     
+  <!--Indicators-->
+  <div>
+    <h4 style="color:white;padding: 20px;font-family:verdana;"> Thriller</h4>
+  </div>
+
+  <!--/.Indicators-->
+
+  <!--Slides-->
+                 <div class="carousel-inner" role="listbox">
+
+                    <!--First slide-->
+                    <div class="carousel-item active">
+
+                      <div class="col-md-3" style="float:left">
+                       <div class="card mb-2">
+                          <img class="card-img-top" src="assets/img/master.jfif" alt="Card image cap"  width="150" height="300">
+                        </div>
+                      </div>
+
+                      <div class="col-md-3" style="float:left">
+                        <div class="card mb-2">
+                          <img class="card-img-top"src="assets/img/thambi.jpg" alt="Card image cap"  width="150" height="300">
+                           </div>
+                      </div>
+
+                      <div class="col-md-3" style="float:left">
+                        <div class="card mb-2">
+                          <img class="card-img-top" src="assets/img/BlackWidow.jpg" alt="Card image cap"  width="150" height="300">
+                           </div>
+                      </div>
+                      
+                      <!--<div class="col-md-3" style="float:left">
+                        <div class="card mb-2">
+                          <img class="card-img-top"
+                            src="https://mdbootstrap.com/img/Photos/Horizontal/City/4-col/img%20(60).jpg" alt="Card image cap">
+                          <div class="card-body">
+                            <h4 class="card-title">Card title</h4>
+                            <p class="card-text">Some quick example text to build on the card title and make up the bulk of the
+                              card's content.</p>
+                            <a class="btn btn-primary">Button</a>
+                          </div>
+                        </div>
+                      </div>-->
+                      
+                       <div class="col-md-3" style="float:left">
+                       <div class="card mb-2">
+                          <img class="card-img-top" src="assets/img/master.jfif" alt="Card image cap"  width="150" height="300">
+                        </div>
+                      </div>
+
+                    </div>
+                    <!--/.First slide-->
+
+                    <!--Second slide-->
+                    <div class="carousel-item">
+
+                      <div class="col-md-3" style="float:left">
+                       <div class="card mb-2">
+                          <img class="card-img-top" src="assets/img/master.jfif" alt="Card image cap"  width="150" height="300">
+                        </div>
+                      </div>
+
+                      <div class="col-md-3" style="float:left">
+                        <div class="card mb-2">
+                          <img class="card-img-top"src="assets/img/thambi.jpg" alt="Card image cap"  width="150" height="300">
+                           </div>
+                      </div>
+
+                      <div class="col-md-3" style="float:left">
+                        <div class="card mb-2">
+                          <img class="card-img-top" src="assets/img/BlackWidow.jpg" alt="Card image cap"  width="150" height="300">
+                           </div>
+                      </div>
+                      
+                     <div class="col-md-3" style="float:left">
+                       <div class="card mb-2">
+                          <img class="card-img-top" src="assets/img/master.jfif" alt="Card image cap"  width="150" height="300">
+                        </div>
+                      </div>
+                    </div>
+                    <!--/.Second slide-->
+
+                   
+
+                   
+
+                  </div>
+                  <!--/.Slides-->
+
+                   <a class="carousel-control-prev" href="#multi-item-example2" role="button" data-slide="prev">
+                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                    <span class="sr-only">Previous</span>
+                  </a>
+                  <a class="carousel-control-next" href="#multi-item-example2" role="button" data-slide="next">
+                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                    <span class="sr-only">Next</span>
+                  </a>
+
+                </div>
+<!--/.Carousel Wrapper-->
+
+
+
+
 <div clas="row"  *ngIf="showMovieScreen">
   <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 mx-auto">
     <app-video-player [src]="selectedSrc" (cancelFunction)="cancel($event)"></app-video-player>
     </div>
     </div>
- <!-- Row 2 End-->
- <!-- Row 3 Start-->
-<!--<div class="row"  *ngIf="!showMovieScreen">
-  <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
-    <h4 style="color:white;padding: 20px;font-family:verdana;">Thriller</h4>
-    </div>
-</div>
-<div clas="row"  *ngIf="!showMovieScreen">
-  <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 mx-auto">
-    <carousel [itemsPerSlide]="itemsPerSlide"
-    [singleSlideOffset]="singleSlideOffset"
-    [noWrap]="!noWrap"
-    [interval]="false"
-    [startFromIndex]="5"
-    (slideRangeChange)="onSlideRangeChange($event)">
-    <slide *ngFor="let slide of slides; let index=index" class="mx-auto">
-      <img [src]="slide.image" alt="image slide" style="display: block; width: 450px;height:200px" (click)="showMovie(slide)">      
-  </slide>
-  </carousel>
-  </div>
-</div>
-<div clas="row"  *ngIf="showMovieScreen">
-  <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 mx-auto">
-    <app-video-player [src]="selectedSrc" (cancelFunction)="cancel($event)"></app-video-player>
-    </div>
-    </div>-->
- <!-- Row 3 End-->
