@@ -1,4 +1,4 @@
-<nav class="navbar navbar-expand-lg navbar-dark" style="height:80px;background-color: black;border:black;overflow: hidden;">
+<nav class="navbar navbar-expand-lg navbar-dark" style="height:80px;background-color: black;border:black;overflow: hidden; font-family: Univia Pro;">
   <a class="navbar-brand" href="#">
   <img src="assets/img/logo1.png" alt="" width="40" height="40"> <img src="assets/img/logo.png" alt="" width="150" height="50"></a>
   <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarText"
@@ -6,7 +6,7 @@
     <span class="navbar-toggler-icon"></span>
   </button>
   <div class="collapse navbar-collapse" id="navbarText">
-    <ul class="navbar-nav mr-auto">
+    <ul class="navbar-nav mr-auto" style="font-family: Univia Pro;">
       <li class="nav-item active">
         <a class="nav-link" style="color:#EBC684;"(click)="navigateTopage('home');">Home <span class="sr-only">(current)</span></a>
       </li>
@@ -35,7 +35,7 @@
         <ul class="navbar-nav mr-auto">
           <li class="nav-item active">
             <!--<a class="nav-link" href="#">Login/Register</a>-->
-            <button type="button" class="btn btn btn-dark" style="font-size:14px; background-color: black;"(click)="openModal(template)">
+            <button type="button" class="btn btn btn-dark" style="font-size:14px; background-color: black;font-family: Univia Pro;border: black;" (click)="openModal(template)">
               Login/Register
             </button>
             <ng-template #template>
