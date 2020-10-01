@@ -18,10 +18,10 @@
      When you move the mouse over a link, the mouse arrow will turn into a little hand.</h3>
      <br>
             <i style="font-size:24px" class="fa">&#xf144;</i>
-         <button type="button" class="btn text-white" style="font-size: 20px;" (click)="showMovie(slide)">Play</button>&nbsp;&nbsp;
+         <button type="button" class="btn text-white" style="font-size: 20px;" (click)="showMovie()">Play</button>&nbsp;&nbsp;
          <b style="font-size:24px;">|</b>&nbsp;&nbsp;
          <i class="fa fa-info-circle" aria-hidden="true"  style="font-size: 20px;"></i>
-         <button type="button" class="btn text-white" style="font-size: 20px;">More Info
+         <button type="button" class="btn text-white" style="font-size: 20px;"(click)="navigateTopage('movies');">More Info
          </button>
 
 
@@ -372,7 +372,7 @@
 
 
 <div clas="row"  *ngIf="showMovieScreen">
-  <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 mx-auto">
+  <div style="background-color: black; border: black;">
     <app-video-player [src]="selectedSrc" (cancelFunction)="cancel($event)"></app-video-player>
     </div>
     </div>

@@ -40,7 +40,7 @@ export class HomeComponent implements OnInit {
     {"src":"https://mdbootstrap.com/img/Photos/Horizontal/City/4-col/img%20(60).jpg"}]
   }
 
-  showMovie(data){
+  showMovie(){
     this.selectedSrc="http://static.videogular.com/assets/videos/videogular.mp4";
     this.showMovieScreen=true;
   }
