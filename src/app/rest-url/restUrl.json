@@ -1,6 +1,9 @@
 {
 	"getMoviesList": {
 		"url": "http://static.videogular.com/assets/videos/videogular.mp4"
-    }
+	},
+	"register":{
+		"url":"/node-api/insert-user"
+	}
     
 }

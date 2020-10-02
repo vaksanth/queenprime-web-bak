@@ -8,7 +8,7 @@
   <div class="collapse navbar-collapse" id="navbarText">
     <ul class="navbar-nav mr-auto" style="font-family: Univia Pro;">
       <li class="nav-item active">
-        <a class="nav-link" style="color:#EBC684;"(click)="navigateTopage('home');">Home <span class="sr-only">(current)</span></a>
+        <a class="nav-link" (click)="navigateTopage('home');">Home <span class="sr-only">(current)</span></a>
       </li>
       <li class="nav-item">
         <a class="nav-link"  (click)="navigateTopage('movies');">Movies</a>
@@ -63,8 +63,8 @@
                   <label for="num" style="color:#ebebeb;margin-left: 20px;">Enter your Phone Number or Email</label>
                   <br>
                   <br>
-                  <input type="text" class="form-control" style="width: 90%; height: 75%;  background-color: black; color:white;margin-left: 20px;" placeholder="Enter your Phone Number or Email"
-                    name="num" required>
+                  <input type="email" class="form-control" style="width: 90%; height: 75%;  background-color: black; color:white;margin-left: 20px;" placeholder="Enter your Phone Number or Email"
+                    name="email" required>
                   <br>
                 
                   <button type="button" class="btn btn-warning" (click)="openTemplateOtp()"
@@ -84,7 +84,7 @@
                   <label for="num" style="color:#ebebeb;margin-left: 20px;">Enter OTP sent to your Phone Number</label>
                   <br>
                   <br>
-                  <input type="text"  class="form-control"  style="width: 90%; height: 75%;  background-color: black; color:white;margin-left: 20px;" placeholder="Enter OTP sent to your Phone Number" name="num" required>
+                  <input type="number"  class="form-control"  style="width: 90%; height: 75%;  background-color: black; color:white;margin-left: 20px;" placeholder="Enter OTP sent to your Phone Number" name="num" required>
                   <br>
                  
                   <button type="button" class="btn btn-warning" data-toggle="modal1" data-target="#myModal1"

@@ -51,4 +51,8 @@ if(event=='false'){
   }
 }
 
+navigateTopage(page){
+  this.router.navigate([page]);
+}
+
 }

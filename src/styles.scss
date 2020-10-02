@@ -115,14 +115,17 @@ mat-step-header .mat-step-label.mat-step-label-active {
     padding-right: 10px !important;
     background-color: #000 !important;
   }
-  .navbar-nav
-  {
-    color:#EBC684 !important;
-  }
-  .active,.navbar-nav:hover
-  {
-    color:#EBC684 !important; 
-  }
+ 
 
+
+
+
+.navbar-nav > .active > a {
+  color:#EBC684 !important;
+     
+}
+.nav-item > a:hover {
+  color:#EBC684 !important;
+}
   
   
